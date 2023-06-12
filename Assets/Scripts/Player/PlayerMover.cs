@@ -17,6 +17,7 @@ public class PlayerMover : MonoBehaviour
     private float curSpeed;
     private float ySpeed;
     private bool walk;
+    private bool isJumping;
 
     private void Awake()
     {
@@ -82,6 +83,7 @@ public class PlayerMover : MonoBehaviour
     private void Jump()
     {
         ySpeed = JumpSpeed;
+        animator.SetTrigger("Jump");
     }
 
     private void OnJump(InputValue inputValue)
